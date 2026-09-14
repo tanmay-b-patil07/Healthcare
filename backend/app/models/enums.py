@@ -1,0 +1,52 @@
+from enum import Enum
+
+
+class BloodGroup(str, Enum):
+    A_POSITIVE = "A_POSITIVE"
+    A_NEGATIVE = "A_NEGATIVE"
+    B_POSITIVE = "B_POSITIVE"
+    B_NEGATIVE = "B_NEGATIVE"
+    AB_POSITIVE = "AB_POSITIVE"
+    AB_NEGATIVE = "AB_NEGATIVE"
+    O_POSITIVE = "O_POSITIVE"
+    O_NEGATIVE = "O_NEGATIVE"
+
+
+class UserRole(str, Enum):
+    DONOR = "DONOR"
+    HOSPITAL = "HOSPITAL"
+    BLOOD_BANK = "BLOOD_BANK"
+    REQUESTER = "REQUESTER"
+    ADMIN = "ADMIN"
+
+
+class DonorMatchStatus(str, Enum):
+    PENDING = "PENDING"
+    NOTIFIED = "NOTIFIED"
+    ACCEPTED = "ACCEPTED"
+    DECLINED = "DECLINED"
+    EXPIRED = "EXPIRED"
+
+
+class NotificationStatus(str, Enum):
+    PENDING = "PENDING"
+    SENT = "SENT"
+    DELIVERED = "DELIVERED"
+    FAILED = "FAILED"
+    READ = "READ"
+
+
+class RequestStatus(str, Enum):
+    REQUESTED = "REQUESTED"
+    DONORS_NOTIFIED = "DONORS_NOTIFIED"
+    DONOR_RESPONDED = "DONOR_RESPONDED"
+    PARTIALLY_FULFILLED = "PARTIALLY_FULFILLED"
+    FULFILLED = "FULFILLED"
+    CANCELLED = "CANCELLED"
+
+
+class UrgencyLevel(str, Enum):
+    LOW = "LOW"
+    MEDIUM = "MEDIUM"
+    HIGH = "HIGH"
+    CRITICAL = "CRITICAL"
